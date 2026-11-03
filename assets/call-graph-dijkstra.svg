@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="900" height="380" role="img" aria-labelledby="t d">
+  <title id="t">Call graph of dijkstra</title>
+  <desc id="d">The dijkstra function calls heappush, heappop, a relax step and path_to.</desc>
+  <style>
+    .bg{fill:#0B0F19}
+    .n{fill:#111827;stroke:#FBBF24;stroke-width:2}
+    .a{fill:#111827;stroke:#F97316;stroke-width:1.5}
+    .b{fill:#111827;stroke:#F43F5E;stroke-width:1.5}
+    .c{fill:#111827;stroke:#7C3AED;stroke-width:1.5}
+    .t{fill:#F9FAFB;font:600 14px ui-monospace,Consolas,monospace}
+    .s{fill:#9CA3AF;font:12px system-ui,sans-serif}
+    .wire{fill:none;stroke:#FBBF24;stroke-width:2;stroke-dasharray:6 6;animation:flow 1.4s linear infinite}
+    @keyframes flow{to{stroke-dashoffset:-24}}
+    @media (prefers-reduced-motion:reduce){.wire{animation:none}}
+  </style>
+  <rect class="bg" width="900" height="380"/>
+  <rect class="n" x="330" y="30" width="240" height="60" rx="8"/>
+  <text class="t" x="352" y="56">dijkstra(g, src)</text><text class="s" x="352" y="76">O((V + E) log V)</text>
+
+  <rect class="a" x="40" y="200" width="200" height="60" rx="8"/>
+  <text class="t" x="60" y="226">heappop(pq)</text><text class="s" x="60" y="246">O(log n) per settle</text>
+  <rect class="b" x="270" y="200" width="200" height="60" rx="8"/>
+  <text class="t" x="290" y="226">relax edge</text><text class="s" x="290" y="246">O(1) compare, update</text>
+  <rect class="c" x="500" y="200" width="160" height="60" rx="8"/>
+  <text class="t" x="520" y="226">heappush</text><text class="s" x="520" y="246">O(log n)</text>
+  <rect class="a" x="690" y="200" width="180" height="60" rx="8"/>
+  <text class="t" x="710" y="226">ValueError</text><text class="s" x="710" y="246">negative weight</text>
+
+  <rect class="b" x="330" y="310" width="240" height="50" rx="8"/>
+  <text class="t" x="352" y="340">path_to(prev, s, t)</text>
+
+  <path class="wire" d="M450 90 V150 H140 V200"/>
+  <path class="wire" d="M450 90 V200 H370 V200"/>
+  <path class="wire" d="M450 90 V150 H580 V200"/>
+  <path class="wire" d="M450 90 V150 H780 V200"/>
+  <path class="wire" d="M370 260 V285 H580 V260"/>
+  <path class="wire" d="M450 285 V310"/>
+</svg>

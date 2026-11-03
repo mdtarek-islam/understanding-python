@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" width="960" height="460" role="img" aria-labelledby="t d">
+  <title id="t">Curriculum map</title>
+  <desc id="d">Eight notebooks in three tiers, joined by orthogonal connectors to the package and test suite.</desc>
+  <style>
+    .bg{fill:#0B0F19}
+    .box{fill:#111827;stroke:#F97316;stroke-width:1.5}
+    .box2{fill:#111827;stroke:#F43F5E;stroke-width:1.5}
+    .box3{fill:#111827;stroke:#7C3AED;stroke-width:1.5}
+    .core{fill:#111827;stroke:#FBBF24;stroke-width:2}
+    .t{fill:#F9FAFB;font:600 14px system-ui,-apple-system,"Segoe UI",sans-serif}
+    .s{fill:#9CA3AF;font:12px ui-monospace,Consolas,monospace}
+    .h{fill:#FBBF24;font:700 13px system-ui,sans-serif;letter-spacing:.08em}
+    .wire{fill:none;stroke:#FBBF24;stroke-width:2;stroke-dasharray:6 6;animation:flow 1.4s linear infinite}
+    @keyframes flow{to{stroke-dashoffset:-24}}
+    @media (prefers-reduced-motion:reduce){.wire{animation:none}}
+  </style>
+  <rect class="bg" width="960" height="460"/>
+  <text class="h" x="40" y="36">FOUNDATIONS</text>
+  <text class="h" x="360" y="36">STRUCTURES</text>
+  <text class="h" x="680" y="36">ALGORITHMS</text>
+
+  <rect class="box" x="40" y="52" width="240" height="64" rx="8"/>
+  <text class="t" x="56" y="78">01 Fundamentals</text><text class="s" x="56" y="98">types, loops, errors</text>
+  <rect class="box" x="40" y="146" width="240" height="64" rx="8"/>
+  <text class="t" x="56" y="172">02 Memory model</text><text class="s" x="56" y="192">refcount, gc, dis</text>
+  <rect class="box" x="40" y="240" width="240" height="64" rx="8"/>
+  <text class="t" x="56" y="266">03 Closures</text><text class="s" x="56" y="286">scope, decorators</text>
+
+  <rect class="box2" x="360" y="52" width="240" height="64" rx="8"/>
+  <text class="t" x="376" y="78">04 Iterators</text><text class="s" x="376" y="98">generators, with</text>
+  <rect class="box2" x="360" y="146" width="240" height="64" rx="8"/>
+  <text class="t" x="376" y="172">05 OOP</text><text class="s" x="376" y="192">dunders, SOLID</text>
+  <rect class="box2" x="360" y="240" width="240" height="64" rx="8"/>
+  <text class="t" x="376" y="266">06 Data structures</text><text class="s" x="376" y="286">heap, AVL, trie</text>
+
+  <rect class="box3" x="680" y="146" width="240" height="64" rx="8"/>
+  <text class="t" x="696" y="172">07 Sorting, search</text><text class="s" x="696" y="192">proofs, bounds</text>
+  <rect class="box3" x="680" y="240" width="240" height="64" rx="8"/>
+  <text class="t" x="696" y="266">08 Graphs, DP</text><text class="s" x="696" y="286">Dijkstra, LIS</text>
+
+  <rect class="core" x="200" y="360" width="560" height="64" rx="8"/>
+  <text class="t" x="220" y="386">src/understanding_python</text>
+  <text class="s" x="220" y="406">internals, functional, patterns, structures, algorithms, graphs, dp</text>
+
+  <path class="wire" d="M280 84 H320 V84 H360"/>
+  <path class="wire" d="M280 178 H320 V178 H360"/>
+  <path class="wire" d="M280 272 H320 V272 H360"/>
+  <path class="wire" d="M600 272 H640 V178 H680"/>
+  <path class="wire" d="M600 272 H640 V272 H680"/>
+  <path class="wire" d="M160 304 V332 H480 V360"/>
+  <path class="wire" d="M480 304 V360"/>
+  <path class="wire" d="M800 304 V332 H480"/>
+</svg>

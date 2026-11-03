@@ -1,0 +1,20 @@
+language: en-GB
+reviews:
+  profile: chill
+  high_level_summary: true
+  poem: false
+  auto_review:
+    enabled: true
+    drafts: false
+  path_filters:
+    - "!**/*.webp"
+    - "!notebooks/**/*.ipynb"
+  path_instructions:
+    - path: "src/**/*.py"
+      instructions: "Check correctness, stated complexity and type hints. Flag any untested branch."
+    - path: "tests/**/*.py"
+      instructions: "Tests must use fixed random seeds and finish in seconds."
+    - path: "**/*.md"
+      instructions: "Use British English, active voice and sentences under 20 words. No emojis."
+chat:
+  auto_reply: true
