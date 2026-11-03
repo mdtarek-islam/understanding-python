@@ -71,3 +71,56 @@ def fib_table(n: int) -> int:
     for _ in range(n):
         a, b = b, a + b
     return a
+
+
+def fib_calls(n: int) -> int:
+    """Number of calls the naive recursion makes: 2 * fib(n + 1) - 1."""
+    return 2 * fib_table(n + 1) - 1
+
+
+def min_coins(coins: list[int], amount: int) -> int:
+    """Fewest coins that sum to `amount`, or -1. O(amount * len(coins)) time, O(amount) space.
+
+    Greedy fails for sets such as (1, 3, 4): amount 6 is 3 + 3, not 4 + 1 + 1.
+    """
+    if amount < 0:
+        raise ValueError("amount must be non-negative")
+    inf = amount + 1
+    best = [0] + [inf] * amount
+    for a in range(1, amount + 1):
+        for c in coins:
+            if 0 < c <= a:
+                best[a] = min(best[a], best[a - c] + 1)
+    return best[amount] if best[amount] != inf else -1
+
+
+def lcs(a: str, b: str) -> str:
+    """Longest common subsequence, as a diff tool finds it. O(len(a) * len(b)) time and space."""
+    rows = [[0] * (len(b) + 1) for _ in range(len(a) + 1)]
+    for i in range(len(a) - 1, -1, -1):
+        for j in range(len(b) - 1, -1, -1):
+            rows[i][j] = rows[i + 1][j + 1] + 1 if a[i] == b[j] else max(rows[i + 1][j], rows[i][j + 1])
+    out, i, j = [], 0, 0
+    while i < len(a) and j < len(b):
+        if a[i] == b[j]:
+            out.append(a[i])
+            i, j = i + 1, j + 1
+        elif rows[i + 1][j] >= rows[i][j + 1]:
+            i += 1
+        else:
+            j += 1
+    return "".join(out)
+
+
+def word_break(text: str, words: set[str]) -> list[str] | None:
+    """Split `text` into dictionary words, or return None. O(n * L) for max word length L."""
+    longest = max(map(len, words), default=0)
+    parts: list[list[str] | None] = [None] * (len(text) + 1)
+    parts[0] = []
+    for end in range(1, len(text) + 1):
+        for start in range(max(0, end - longest), end):
+            head = parts[start]
+            if head is not None and text[start:end] in words:
+                parts[end] = head + [text[start:end]]
+                break
+    return parts[len(text)]

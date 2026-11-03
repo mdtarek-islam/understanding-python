@@ -1,6 +1,11 @@
+# Runtime: none. The package uses the standard library only.
+# Development and notebooks. Python 3.13.x is required (PEP 695 generics, specialised bytecode).
+# Create the environment with: python3.13 -m venv .venv
 pytest>=8
 nbformat>=5.9
 nbclient>=0.10
 nbconvert>=7
 ipykernel>=6.29
 jupyterlab>=4
+matplotlib>=3.9
+mypy>=1.11

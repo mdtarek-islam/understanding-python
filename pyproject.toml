@@ -4,16 +4,25 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "understanding-python"
-version = "0.1.0"
-description = "Executable notebooks on Python internals, data structures and algorithms."
+version = "0.2.0"
+description = "Executable notebooks on CPython internals, concurrency, data structures and algorithms."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.13,<3.14"
 license = { text = "MIT" }
 authors = [{ name = "MD Tarek Islam" }]
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["pytest>=8", "nbformat>=5.9", "nbclient>=0.10", "nbconvert>=7", "ipykernel>=6.29", "jupyterlab>=4"]
+dev = [
+    "pytest>=8",
+    "nbformat>=5.9",
+    "nbclient>=0.10",
+    "nbconvert>=7",
+    "ipykernel>=6.29",
+    "jupyterlab>=4",
+    "matplotlib>=3.9",
+    "mypy>=1.11",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
