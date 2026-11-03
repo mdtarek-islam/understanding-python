@@ -24,10 +24,14 @@ class Vector:
     def __hash__(self) -> int:
         return hash((self.x, self.y))
 
-    def __add__(self, other: "Vector") -> "Vector":
+    def __add__(self, other: object) -> "Vector":
+        if not isinstance(other, Vector):
+            return NotImplemented
         return Vector(self.x + other.x, self.y + other.y)
 
-    def __mul__(self, k: float) -> "Vector":
+    def __mul__(self, k: object) -> "Vector":
+        if not isinstance(k, (int, float)):
+            return NotImplemented
         return Vector(self.x * k, self.y * k)
 
     __rmul__ = __mul__

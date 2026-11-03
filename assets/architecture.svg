@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" width="960" height="460" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" width="1000" height="470" role="img" aria-labelledby="t d">
   <title id="t">Curriculum map</title>
-  <desc id="d">Eight notebooks in three tiers, joined by orthogonal connectors to the package and test suite.</desc>
+  <desc id="d">Eleven notebooks in three tiers, joined by orthogonal connectors to the package and test suite.</desc>
   <style>
     .bg{fill:#0B0F19}
     .box{fill:#111827;stroke:#F97316;stroke-width:1.5}
@@ -14,40 +14,54 @@
     @keyframes flow{to{stroke-dashoffset:-24}}
     @media (prefers-reduced-motion:reduce){.wire{animation:none}}
   </style>
-  <rect class="bg" width="960" height="460"/>
+  <rect class="bg" width="1000" height="470"/>
   <text class="h" x="40" y="36">FOUNDATIONS</text>
-  <text class="h" x="360" y="36">STRUCTURES</text>
-  <text class="h" x="680" y="36">ALGORITHMS</text>
+  <text class="h" x="520" y="36">STRUCTURES</text>
+  <text class="h" x="760" y="36">ALGORITHMS</text>
 
-  <rect class="box" x="40" y="52" width="240" height="64" rx="8"/>
-  <text class="t" x="56" y="78">01 Fundamentals</text><text class="s" x="56" y="98">types, loops, errors</text>
-  <rect class="box" x="40" y="146" width="240" height="64" rx="8"/>
-  <text class="t" x="56" y="172">02 Memory model</text><text class="s" x="56" y="192">refcount, gc, dis</text>
-  <rect class="box" x="40" y="240" width="240" height="64" rx="8"/>
-  <text class="t" x="56" y="266">03 Closures</text><text class="s" x="56" y="286">scope, decorators</text>
+  <rect class="box" x="40" y="52" width="200" height="64" rx="8"/>
+  <text class="t" x="56" y="78">01 Memory model</text><text class="s" x="56" y="98">refcount, gc, dis</text>
+  <rect class="box" x="40" y="146" width="200" height="64" rx="8"/>
+  <text class="t" x="56" y="172">02 Typing</text><text class="s" x="56" y="192">PEP 695, Protocol</text>
+  <rect class="box" x="40" y="240" width="200" height="64" rx="8"/>
+  <text class="t" x="56" y="266">03 Iterators</text><text class="s" x="56" y="286">generators, itertools</text>
 
-  <rect class="box2" x="360" y="52" width="240" height="64" rx="8"/>
-  <text class="t" x="376" y="78">04 Iterators</text><text class="s" x="376" y="98">generators, with</text>
-  <rect class="box2" x="360" y="146" width="240" height="64" rx="8"/>
-  <text class="t" x="376" y="172">05 OOP</text><text class="s" x="376" y="192">dunders, SOLID</text>
-  <rect class="box2" x="360" y="240" width="240" height="64" rx="8"/>
-  <text class="t" x="376" y="266">06 Data structures</text><text class="s" x="376" y="286">heap, AVL, trie</text>
+  <rect class="box" x="280" y="52" width="200" height="64" rx="8"/>
+  <text class="t" x="296" y="78">04 Decorators</text><text class="s" x="296" y="98">closures, with</text>
+  <rect class="box" x="280" y="146" width="200" height="64" rx="8"/>
+  <text class="t" x="296" y="172">05 Objects</text><text class="s" x="296" y="192">dunders, slots</text>
+  <rect class="box" x="280" y="240" width="200" height="64" rx="8"/>
+  <text class="t" x="296" y="266">06 Concurrency</text><text class="s" x="296" y="286">GIL, asyncio</text>
 
-  <rect class="box3" x="680" y="146" width="240" height="64" rx="8"/>
-  <text class="t" x="696" y="172">07 Sorting, search</text><text class="s" x="696" y="192">proofs, bounds</text>
-  <rect class="box3" x="680" y="240" width="240" height="64" rx="8"/>
-  <text class="t" x="696" y="266">08 Graphs, DP</text><text class="s" x="696" y="286">Dijkstra, LIS</text>
+  <rect class="box2" x="520" y="52" width="200" height="64" rx="8"/>
+  <text class="t" x="536" y="78">07 Arrays, hashing</text><text class="s" x="536" y="98">dict, LRU</text>
+  <rect class="box2" x="520" y="146" width="200" height="64" rx="8"/>
+  <text class="t" x="536" y="172">08 Trees, heaps</text><text class="s" x="536" y="192">AVL, tries</text>
 
-  <rect class="core" x="200" y="360" width="560" height="64" rx="8"/>
-  <text class="t" x="220" y="386">src/understanding_python</text>
-  <text class="s" x="220" y="406">internals, functional, patterns, structures, algorithms, graphs, dp</text>
+  <rect class="box3" x="760" y="52" width="200" height="64" rx="8"/>
+  <text class="t" x="776" y="78">09 Graphs</text><text class="s" x="776" y="98">Dijkstra, A*</text>
+  <rect class="box3" x="760" y="146" width="200" height="64" rx="8"/>
+  <text class="t" x="776" y="172">10 Dynamic prog.</text><text class="s" x="776" y="192">knapsack, LCS</text>
+  <rect class="box3" x="760" y="240" width="200" height="64" rx="8"/>
+  <text class="t" x="776" y="266">11 Complexity</text><text class="s" x="776" y="286">timeit, plots</text>
 
-  <path class="wire" d="M280 84 H320 V84 H360"/>
-  <path class="wire" d="M280 178 H320 V178 H360"/>
-  <path class="wire" d="M280 272 H320 V272 H360"/>
-  <path class="wire" d="M600 272 H640 V178 H680"/>
-  <path class="wire" d="M600 272 H640 V272 H680"/>
-  <path class="wire" d="M160 304 V332 H480 V360"/>
-  <path class="wire" d="M480 304 V360"/>
-  <path class="wire" d="M800 304 V332 H480"/>
+  <rect class="core" x="180" y="372" width="640" height="76" rx="8"/>
+  <text class="t" x="200" y="398">src/understanding_python</text>
+  <text class="s" x="200" y="418">internals, functional, typing_tools, oop, patterns, concurrency</text>
+  <text class="s" x="200" y="436">hashing, structures, heaps, trees, graphs, pathfinding, dp, bench</text>
+
+  <path class="wire" d="M140 116 V146"/>
+  <path class="wire" d="M140 210 V240"/>
+  <path class="wire" d="M240 272 H260 V84 H280"/>
+  <path class="wire" d="M380 116 V146"/>
+  <path class="wire" d="M380 210 V240"/>
+  <path class="wire" d="M480 272 H500 V84 H520"/>
+  <path class="wire" d="M620 116 V146"/>
+  <path class="wire" d="M720 178 H740 V84 H760"/>
+  <path class="wire" d="M860 116 V146"/>
+  <path class="wire" d="M860 210 V240"/>
+  <path class="wire" d="M140 304 V340 H300 V372"/>
+  <path class="wire" d="M380 304 V372"/>
+  <path class="wire" d="M620 210 V372"/>
+  <path class="wire" d="M860 304 V340 H700 V372"/>
 </svg>
